@@ -28,10 +28,23 @@
     </div>
 
     <br><br>
-    
+
       <h1 ng-class="textStyling">
         Change This Text With The Dropdown!
       </h1>
+
+    <br><br>
+
+    <h2>
+      What styling will it be?
+    </h2>
+    <p>
+      <ul ng-controller="textCtrl">
+        <li>{{randomFont}} font?</li>
+        <li>{{randomColor}} color?</li>
+        <li>{{randomStyle}} style?</li>
+      </ul>
+    </p>
 
     <br><br>
 
@@ -108,6 +121,8 @@
           Enter Font Name As It Appears In Drop Down
         </h2>
       </div>
+
+      <br><br>
 
 
     <!-- angular CDN -->
