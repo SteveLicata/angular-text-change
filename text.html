@@ -2,7 +2,13 @@
 <html ng-app=textapp ng-cloak>
   <head>
     <meta charset="utf-8">
+
+    <!-- Bootstrap Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- my CSS -->
     <link rel="stylesheet" href="main.css">
+
     <title>Angular Text</title>
     <style>
       [ng\:cloak], [ng-cloak], .ng-cloak {
@@ -12,118 +18,132 @@
   </head>
   <body>
 
-    <div>
-      <select class="" name="" ng-model="textStyling">
-        <option value="blueItalicText">Blue Italic 20px</option>
-        <option value="redBoldText">Red Bold 25px</option>
-        <option value="greenStripedCursive">Green Striped Cursive 30px</option>
-        <option value="redStripedBoldFantasy">Red Striped Bold Fantasy 35px</option>
-        <option value="snowStripedMonospace">Snow Striped MonoSpace 40px</option>
-        <option value="graySerifGreenStripe">Gray Serif Green Stripe 50px</option>
-        <option value="whiteBlueStripedItalicBorder">White Italic Blue Striped Border 75px</option>
-        <option value="blackYellowStripeThin">Black Thin Yellow Striped 100px</option>
-        <option value="orangeCursiveBlackStripe">Orange Cursive Black Striped 125px</option>
-        <option value="purpleYellowStripe">Purple Sans-Serif Yellow Stripe 150px</option>
-      </select>
-    </div>
+    <div class="container-fluid">
 
-    <br><br>
-
-      <h1 ng-class="textStyling">
-        Change This Text With The Dropdown!
-      </h1>
-
-    <br><br>
-
-    <h2>
-      What styling will it be?
-    </h2>
-    <p>
-      <ul ng-controller="textCtrl">
-        <li>{{randomFont}} font?</li>
-        <li>{{randomColor}} color?</li>
-        <li>{{randomStyle}} style?</li>
-      </ul>
-    </p>
-
-    <br><br>
-
-      <label for="">
-        <h2>
-          Type The Name of the Font Style to see it's CSS code:
-        </h2>
-        <input type="text" name="" value="" ng-model="cssStyle">
-      </label>
-
-      <div ng-switch="cssStyle">
-        <h2 ng-switch-when="Blue Italic 20px">
-          color: blue;
-          font-style: italic;
-          font-size: 20px;
-        </h2>
-        <h2 ng-switch-when="Red Bold 25px">
-          color: red;
-          font-weight: bold;
-          font-size: 25px;
-        </h2>
-        <h2 ng-switch-when="Green Striped Cursive 30px">
-          color: green;
-          background-color: #DBE9F4;
-          font-family: cursive;
-          font-size: 30px;
-        </h2>
-        <h2 ng-switch-when="Red Striped Bold Fantasy 35px">
-          color: red;
-          background-color: #F5F5DC;
-          font-weight: bold;
-          font-family: fantasy;
-          font-size: 35px;
-        </h2>
-        <h2 ng-switch-when="Snow Striped MonoSpace 40px">color: snow;
-          background-color: black;
-          font-family: monospace;
-          font-size: 40px;
-        </h2>
-        <h2 ng-switch-when="Gray Serif Green Stripe 50px">
-          color: lightgray;
-          font-weight: 100;
-          font-family: serif;
-          background-color: green;
-          font-size: 50px;
-        </h2>
-        <h2 ng-switch-when="White Italic Blue Striped Border 75px">
-          color: white;
-          font-family: sans-serif;
-          font-style: italic;
-          background-color: royalblue;
-          border-radius: 10%;
-          font-size: 75px;
-        </h2>
-        <h2 ng-switch-when="Black Thin Yellow Striped 100px">
-          color: black;
-          background-color: yellow;
-          font-weight: lighter;
-          font-size: 100px;
-        </h2>
-        <h2 ng-switch-when="Orange Cursive Black Striped 125px">
-          color: orange;
-          background-color: black;
-          font-size: 125px;
-          font-family: cursive;
-        </h2>
-        <h2 ng-switch-when="Purple Sans-Serif Yellow Stripe 150px">
-          color: purple;
-          background-color: yellow;
-          font-family: sans-serif;
-          font-size: 150px;
-        </h2>
-        <h2 ng-switch-default="Enter Name">
-          Enter Font Name As It Appears In Drop Down
-        </h2>
+      <div class="row">
+        <div class="col-sm-12">
+          <div>
+            <select class="" name="" ng-model="textStyling">
+              <option value="blueItalicText">Blue Italic 20px</option>
+              <option value="redBoldText">Red Bold 25px</option>
+              <option value="greenStripedCursive">Green Striped Cursive 30px</option>
+              <option value="redStripedBoldFantasy">Red Striped Bold Fantasy 35px</option>
+              <option value="snowStripedMonospace">Snow Striped MonoSpace 40px</option>
+              <option value="graySerifGreenStripe">Gray Serif Green Stripe 50px</option>
+              <option value="whiteBlueStripedItalicBorder">White Italic Blue Striped Border 75px</option>
+              <option value="blackYellowStripeThin">Black Thin Yellow Striped 100px</option>
+              <option value="orangeCursiveBlackStripe">Orange Cursive Black Striped 125px</option>
+              <option value="purpleYellowStripe">Purple Sans-Serif Yellow Stripe 150px</option>
+            </select>
+          </div>
+        </div>
       </div>
 
       <br><br>
 
+        <h1 ng-class="textStyling">
+          Change This Text With The Dropdown!
+        </h1>
+
+      <br><br>
+
+      <h2>
+        What styling will it be?
+      </h2>
+      <p>
+        <ul ng-controller="textCtrl">
+          <li>{{randomFont}} font?</li>
+          <li>{{randomColor}} color?</li>
+          <li>{{randomStyle}} style?</li>
+        </ul>
+      </p>
+      <p>(refresh to randomize possibilities)</p>
+
+      <br><br>
+
+        <label for="">
+          <h2>
+            Type The Name of the Font Style to see it's CSS code:
+          </h2>
+          <input type="text" name="" value="" ng-model="cssStyle">
+        </label>
+
+        <div ng-switch="cssStyle">
+          <h2 ng-switch-when="Blue Italic 20px">
+            color: blue;
+            font-style: italic;
+            font-size: 20px;
+          </h2>
+          <h2 ng-switch-when="Red Bold 25px">
+            color: red;
+            font-weight: bold;
+            font-size: 25px;
+          </h2>
+          <h2 ng-switch-when="Green Striped Cursive 30px">
+            color: green;
+            background-color: #DBE9F4;
+            font-family: cursive;
+            font-size: 30px;
+          </h2>
+          <h2 ng-switch-when="Red Striped Bold Fantasy 35px">
+            color: red;
+            background-color: #F5F5DC;
+            font-weight: bold;
+            font-family: fantasy;
+            font-size: 35px;
+          </h2>
+          <h2 ng-switch-when="Snow Striped MonoSpace 40px">color: snow;
+            background-color: black;
+            font-family: monospace;
+            font-size: 40px;
+          </h2>
+          <h2 ng-switch-when="Gray Serif Green Stripe 50px">
+            color: lightgray;
+            font-weight: 100;
+            font-family: serif;
+            background-color: green;
+            font-size: 50px;
+          </h2>
+          <h2 ng-switch-when="White Italic Blue Striped Border 75px">
+            color: white;
+            font-family: sans-serif;
+            font-style: italic;
+            background-color: royalblue;
+            border-radius: 10%;
+            font-size: 75px;
+          </h2>
+          <h2 ng-switch-when="Black Thin Yellow Striped 100px">
+            color: black;
+            background-color: yellow;
+            font-weight: lighter;
+            font-size: 100px;
+          </h2>
+          <h2 ng-switch-when="Orange Cursive Black Striped 125px">
+            color: orange;
+            background-color: black;
+            font-size: 125px;
+            font-family: cursive;
+          </h2>
+          <h2 ng-switch-when="Purple Sans-Serif Yellow Stripe 150px">
+            color: purple;
+            background-color: yellow;
+            font-family: sans-serif;
+            font-size: 150px;
+          </h2>
+          <h2 ng-switch-default="Enter Name">
+            Enter Font Name As It Appears In Drop Down
+          </h2>
+        </div>
+
+        <br><br>
+
+
+    </div>
+    <!-- End bootstrap grid -->
+
+
+    <!-- Bootstrap Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
     <!-- angular CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
