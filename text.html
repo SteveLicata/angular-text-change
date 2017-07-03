@@ -28,23 +28,22 @@
 
     <div class="container-fluid">
 
-
         <br><br>
 
       <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-12">
           <div>
             <center><select class="" name="" ng-model="textStyling">
-                      <option value="blueItalicText">Blue Italic 20px</option>
-                      <option value="redBoldText">Red Bold 25px</option>
-                      <option value="greenStripedCursive">Green Striped Cursive 30px</option>
-                      <option value="redStripedBoldFantasy">Red Striped Bold Fantasy 35px</option>
-                      <option value="snowStripedMonospace">Snow Striped MonoSpace 40px</option>
-                      <option value="graySerifGreenStripe">Gray Serif Green Stripe 50px</option>
-                      <option value="whiteBlueStripedItalicBorder">White Italic Blue Striped Border 75px</option>
-                      <option value="blackYellowStripeThin">Black Thin Yellow Striped 100px</option>
-                      <option value="orangeCursiveBlackStripe">Orange Cursive Black Striped 125px</option>
-                      <option value="purpleYellowStripe">Purple Sans-Serif Yellow Stripe 150px</option>
+                      <option value="blueItalicText">Small Blue</option>
+                      <option value="redBoldText">Bold Red</option>
+                      <option value="greenStripedCursive">The Shire</option>
+                      <option value="redStripedBoldFantasy">Dragon</option>
+                      <option value="snowStripedMonospace">NY Times</option>
+                      <option value="graySerifGreenStripe">St Patty</option>
+                      <option value="whiteBlueStripedItalicBorder">Blue Devil</option>
+                      <option value="blackYellowStripeThin">Black and Yellow</option>
+                      <option value="orangeCursiveBlackStripe">Halloween</option>
+                      <option value="purpleYellowStripe">LA Lakers</option>
                     </select>
           </div>
         </div>
@@ -56,6 +55,19 @@
         <div class="col-sm-12 col-md-12 col-lg-12">
           <center><h1 ng-class="textStyling">
                     Change This Text With The Dropdown!
+                  </h1>
+                  <br>
+                  <p>
+                    Or
+                  </p>
+                  <br>
+                  <p>
+                    Enter Your Custom Text Below and use the Dropdown:
+                  </p>
+                  <br>
+                  <input type="text" name="" value="" ng-model="customtext">
+                  <h1 ng-class="textStyling">
+                    {{customtext}}
                   </h1>
         </div>
       </div>
@@ -90,66 +102,87 @@
           <br><br><br>
 
           <div ng-switch="cssStyle">
-            <h2 ng-switch-when="Blue Italic 20px">
+            <h2 ng-switch-when="Small Blue">
+              {
               color: blue;
               font-style: italic;
               font-size: 20px;
+              }
             </h2>
-            <h2 ng-switch-when="Red Bold 25px">
+            <h2 ng-switch-when="Bold Red">
+              {
               color: red;
               font-weight: bold;
               font-size: 25px;
+              }
             </h2>
-            <h2 ng-switch-when="Green Striped Cursive 30px">
+            <h2 ng-switch-when="The Shire">
+              {
               color: green;
               background-color: #DBE9F4;
               font-family: cursive;
               font-size: 30px;
+              }
             </h2>
-            <h2 ng-switch-when="Red Striped Bold Fantasy 35px">
+            <h2 ng-switch-when="Dragon">
+              {
               color: red;
               background-color: #F5F5DC;
               font-weight: bold;
               font-family: fantasy;
               font-size: 35px;
+              }
             </h2>
-            <h2 ng-switch-when="Snow Striped MonoSpace 40px">color: snow;
+            <h2 ng-switch-when="NY Times">
+              {
+              color: snow;
               background-color: black;
               font-family: monospace;
               font-size: 40px;
+              }
             </h2>
-            <h2 ng-switch-when="Gray Serif Green Stripe 50px">
+            <h2 ng-switch-when="St Patty">
+              {
               color: lightgray;
               font-weight: 100;
               font-family: serif;
               background-color: green;
               font-size: 50px;
+              }
             </h2>
-            <h2 ng-switch-when="White Italic Blue Striped Border 75px">
+            <h2 ng-switch-when="Blue Devil">
+              {
               color: white;
               font-family: sans-serif;
               font-style: italic;
               background-color: royalblue;
               border-radius: 10%;
               font-size: 75px;
+              }
             </h2>
-            <h2 ng-switch-when="Black Thin Yellow Striped 100px">
+            <h2 ng-switch-when="Black and Yellow">
+              {
               color: black;
               background-color: yellow;
               font-weight: lighter;
               font-size: 100px;
+              }
             </h2>
-            <h2 ng-switch-when="Orange Cursive Black Striped 125px">
+            <h2 ng-switch-when="Halloween">
+              {
               color: orange;
               background-color: black;
               font-size: 125px;
               font-family: cursive;
+              }
             </h2>
-            <h2 ng-switch-when="Purple Sans-Serif Yellow Stripe 150px">
+            <h2 ng-switch-when="LA Lakers">
+              {
               color: purple;
               background-color: yellow;
               font-family: sans-serif;
               font-size: 150px;
+              }
             </h2>
             <p ng-switch-default="Enter Name">
               (Enter Font Name As It Appears In Drop Down)
@@ -159,15 +192,12 @@
         </div>
       </div>
 
-        <br><br>
-
-
     </div>
     <!-- End bootstrap grid -->
 
 
     <!-- Bootstrap Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
     <!-- angular CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
