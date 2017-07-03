@@ -16,6 +16,6 @@ textapp.controller('textCtrl', function($scope){
 
   $scope.randomFont = fonts[Math.floor((Math.random() * 5))];
   $scope.randomColor = colors[Math.floor((Math.random() * 7))];
-  $scope.randomStyle = style[Math.floor((Math.random() * 2))]; 
+  $scope.randomStyle = style[Math.floor((Math.random() * 2))];
 
 });
