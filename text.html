@@ -62,7 +62,7 @@
                   </p>
                   <br>
                   <p>
-                    Enter Your Custom Text Below and use the Dropdown:
+                    Enter Your <i>Custom Text</i> Below and use the Dropdown:
                   </p>
                   <br>
                   <input type="text" name="" value="" ng-model="customtext">
@@ -77,17 +77,18 @@
       <div class="row bottompage">
         <div class="col-sm-12 col-md-6 col-lg-6">
           <h2>
-            What styling will it be?
+            Styling Possibilities:
           </h2>
           <h2>
             <ul ng-controller="textCtrl">
-              <li>{{randomFont}} font?</li>
-              <li>{{randomColor}} color?</li>
-              <li>{{randomStyle}} style?</li>
+              <li>Font: {{randomFont}}</li>
+              <li>Color: {{randomColor}}</li>
+              <li>Style: {{randomStyle}}</li>
             </ul>
           </h2>
-          <p>(Refresh Page To Randomize Possibilities)</p>
+          <p>Refresh Page To Randomize Possibilities</p>
         </div>
+
 
         <div class="col-sm-12 col-md-6 col-lg-6">
 
@@ -185,7 +186,7 @@
               }
             </h2>
             <p ng-switch-default="Enter Name">
-              (Enter Font Name As It Appears In Drop Down)
+              Enter Font Name As It Appears In Drop Down
             </p>
           </div>
 
